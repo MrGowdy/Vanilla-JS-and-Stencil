@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/web-components-stencil.esm.js"></script>
+  <script nomodule src="/build/web-components-stencil.js"></script>
+  <style>
+    html {
+      --color-primary: rgb(97, 0, 97);
+      --color-primary-inverse: white;
+      --color-primary-highlight: rgb(180, 3, 180);
+      --color-primary-inactive: #ccc;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    .side-nav ul {
+      list-style: none;
+    }
+
+    .side-nav li {
+      margin: 1rem 0;
+    }
+
+    .side-nav a {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <my-tooltip content="This is the tooltip content">View info here:</my-tooltip>
+  <side-drawer drawerTitle="Main menu">
+    <nav class="side-nav ">
+      <ul>
+        <li><a href="/">A link</a></li>
+        <li><a href="/">Another link</a></li>
+        <li><a href="/">A 3rd link</a></li>
+      </ul>
+    </nav>
+  </side-drawer>
+
+  <stock-price></stock-price>
+  <stock-finder></stock-finder>
+
+  <script>
+    // const stockFinderEl = document.querySelector('stock-finder');
+    // stockFinderEl.addEventListener('symbolClicked', event => {
+    //   console.log(event);
+    // })
+
+    const sideDrawer = document.querySelector('side-drawer');
+
+    sideDrawer.addEventListener('mouseenter', () => {
+      sideDrawer.setAttribute('open', 'true')
+    })
+    sideDrawer.addEventListener('mouseleave', () => {
+      sideDrawer.removeAttribute('open', 'false')
+    })
+  </script>
+</body>
+
+</html>

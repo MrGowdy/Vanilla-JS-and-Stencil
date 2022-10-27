@@ -1,0 +1,76 @@
+:host {
+    display: block;
+    font-family: sans-serif;
+    border:2px solid var(--color-primary, black);
+    margin: 2rem;
+    padding: 1rem;
+    width: 20rem;
+    max-width: 100%;
+  }
+
+form input {
+    font:inherit;
+    color: var(--color-primary, black);
+    padding: 0.1rem 0.25rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  form input:focus,
+  form button:focus {
+    outline: none;
+  }
+  
+  form button {
+    font:inherit;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--color-primary, black);
+    background: var(--color-primary, black);
+    color: white;
+    cursor:pointer;
+  }
+  
+  form button:hover,
+  form button:active {
+    background: var(--color-primary-highlight);
+    border-color: var(--color-primary-highlight);
+  }
+  
+  form button:disabled {
+    background: var(--color-primary-inactive);
+    border-color: var(--color-primary-inactive);
+    cursor:not-allowed;
+  }
+
+  ul {
+      margin: 0;
+      list-style: none;
+      margin-left: -2.5rem;
+  }
+
+  li {
+      margin: 0.25rem 0;
+      padding: 0.25rem;
+      border: 1px solid var(--color-primary-inactive);
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      cursor: pointer;
+  }
+
+  li:hover,
+  li:active {
+    background: var(--color-primary-highlight);
+    color: white;
+  }
+
+  #stockResultSymbol{
+    display: flex;
+    text-align: start;
+  }
+
+  #stockResultName{
+      display: flex;
+      text-align: end;
+      font-size:14px;
+  }

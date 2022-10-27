@@ -1,0 +1,31 @@
+:host {
+  display: block;
+}
+
+#main-content {
+  position: relative;
+  left: 10vh;
+  display: block;
+}
+
+#icon {
+  background: black;
+  color: white;
+  margin: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  border-radius: 50%;
+}
+
+#tooltip-content {
+  font-weight: normal;
+  background-color : black;
+  color : white;
+  position : absolute;
+  top: 1.5rem;
+  left: 0.75rem;
+  z-index : 10;
+  padding: 0.15rem;
+  border-radius: 3px;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.26);
+}
